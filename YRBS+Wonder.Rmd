@@ -1,0 +1,87 @@
+---
+title: "R Notebook"
+output: html_notebook
+---
+
+```{r setup, include=FALSE}
+
+library(easypackages)
+libraries("readxl","ggplot2","stringr","rlist","data.table","DBI","RSQLite",  
+          "stargazer","Hmisc","magrittr","formattable","RPostgreSQL", 
+          "tidyverse","dbplyr","pbapply","stargazer","quantreg","olsrr", 
+          "faraway","binaryLogic","sf","caret","Amelia","censusapi","maps", 
+          "tidycensus","reshape","boot","biglm","tigris","summarytools",
+          "dplyr", "googlesheets4", "zoo", "tseries", "forecast", "xts")
+
+options(scipen=999)
+
+```
+
+
+Read in the data.
+```{r read data, echo=F}
+teen <- read.csv("TeensmentalhealthdataandtechuseSheet6.csv", header=T)
+wonder <- range_read("https://docs.google.com/spreadsheets/d/1eo2uoSubor1MqxRqVLyrXL1Z2OvRHNBY9piUKkddpco/edit#gid=1430897216",
+                     sheet = "teen suicides") %>%
+  select(1:4)
+stack <- range_read("https://docs.google.com/spreadsheets/d/1eo2uoSubor1MqxRqVLyrXL1Z2OvRHNBY9piUKkddpco/edit#gid=1430897216",
+                    sheet = "Stack-YRBS-Wonder-R") %>%
+  select(1:10)
+
+```
+
+Clean the data and make some filetypes.
+```{r, echo=T}
+
+wonder_tot_ts <- ts(wonder$`Total suicide rate`, start = 1968, frequency = 1)
+wonder_grl <- ts(wonder$`Girls suicide rate`, start = 1968, frequency = 1)
+wonder_boy <- ts(wonder$`Boys suicide rate`, start = 1968, frequency = 1)
+YRBS_sad_tot_ts <- ts(na.omit(stack$`Felt sad or hopeless (YRBS)`),
+                      start = 1999, frequency = .5)
+YRBS_sad_grl_ts <- ts(na.omit(stack$`Female felt sad or hopeless`),
+                      start = 1999, frequency = .5)
+YRBS_sad_boy_ts <- ts(na.omit(stack$`Male felt sad or hopeless`),
+                      start = 1999, frequency = .5)
+YRBS_con_tot_ts <- ts(na.omit(stack$`Seriously considered attempting suicide (YRBS)`),
+                      start = 1991, frequency = .5)
+YRBS_con_grl_ts <- ts(na.omit(stack$`Female seriously considered attempting suicide (YRBS)`),
+                      start = 1991, frequency = .5)
+YRBS_con_boy_ts <- ts(na.omit(stack$`Male seriously considered attempting suicide`),
+                      start = 1991, frequency = .5)
+
+
+```
+
+
+Let's plot what we have so far. 
+
+```{r plot first}
+
+tsdisplay(wonder_tot_ts, main = "Total suicides")
+tsdisplay(YRBS_sad_tot_ts, main = "Total YRBS feelings of sadness")
+tsdisplay(YRBS_con_tot_ts, main = "Total YRBS contemplation of suicide")
+
+```
+
+What about the girls?
+
+```{r plot girls}
+
+tsdisplay(wonder_grl, main = "Girls suicide")
+tsdisplay(YRBS_sad_grl_ts, main = "Girls YRBS feelings of sadness")
+tsdisplay(YRBS_con_grl_ts, main = "Girls YRBS contemplation of suicide")
+
+```
+
+
+What about the boys?
+
+```{r plot boys}
+
+tsdisplay(wonder_boy, main = "Boys suicide")
+tsdisplay(YRBS_sad_boy_ts, main = "Boys YRBS feelings of sadness")
+tsdisplay(YRBS_con_boy_ts, main = "Boys YRBS contemplation of suicide")
+
+```
+
+
