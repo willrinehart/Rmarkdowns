@@ -1,29 +1,7 @@
-R Notebook
+Analysis of YRBS and Wonder data
 ================
 
 Read in the data.
-
-    ## ! Using an auto-discovered, cached token.
-
-    ##   To suppress this message, modify your code or options to clearly consent to
-    ##   the use of a cached token.
-
-    ##   See gargle's "Non-interactive auth" vignette for more details:
-
-    ##   <https://gargle.r-lib.org/articles/non-interactive-auth.html>
-
-    ## ℹ The googlesheets4 package is using a cached token for 'will@thecgo.org'.
-
-    ## ✔ Reading from "Teens mental health data and tech use".
-
-    ## ✔ Range ''teen suicides''.
-
-    ## New names:
-    ## ✔ Reading from "Teens mental health data and tech use".
-    ## ✔ Range ''Stack-YRBS-Wonder-R''.
-    ## New names:
-    ## • `` -> `...6`
-    ## • `` -> `...7`
 
 Clean the data and make some filetypes.
 
