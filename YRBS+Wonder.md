@@ -25,85 +25,17 @@ YRBS_con_boy_ts <- ts(na.omit(stack$`Male seriously considered attempting suicid
 
 Let’s plot what we have so far.
 
-``` r
-tsdisplay(wonder_tot_ts, main = "Total suicides")
-```
-
-![](YRBS+Wonder_files/figure-gfm/plot%20first-1.png)<!-- -->
-
-``` r
-tsdisplay(YRBS_sad_tot_ts, main = "Total YRBS feelings of sadness", lag.max=10)
-```
-
-![](YRBS+Wonder_files/figure-gfm/plot%20first-2.png)<!-- -->
-
-``` r
-tsdisplay(YRBS_con_tot_ts, main = "Total YRBS contemplation of suicide", lag.max=10)
-```
-
-![](YRBS+Wonder_files/figure-gfm/plot%20first-3.png)<!-- -->
+![](YRBS+Wonder_files/figure-gfm/plot%20first-1.png)<!-- -->![](YRBS+Wonder_files/figure-gfm/plot%20first-2.png)<!-- -->![](YRBS+Wonder_files/figure-gfm/plot%20first-3.png)<!-- -->
 
 What about the girls?
 
-``` r
-tsdisplay(wonder_grl, main = "Girls suicide")
-```
-
-![](YRBS+Wonder_files/figure-gfm/plot%20girls-1.png)<!-- -->
-
-``` r
-tsdisplay(YRBS_sad_grl_ts, main = "Girls YRBS feelings of sadness", lag.max=10)
-```
-
-![](YRBS+Wonder_files/figure-gfm/plot%20girls-2.png)<!-- -->
-
-``` r
-tsdisplay(YRBS_con_grl_ts, main = "Girls YRBS contemplation of suicide", lag.max=10)
-```
-
-![](YRBS+Wonder_files/figure-gfm/plot%20girls-3.png)<!-- -->
+![](YRBS+Wonder_files/figure-gfm/plot%20girls-1.png)<!-- -->![](YRBS+Wonder_files/figure-gfm/plot%20girls-2.png)<!-- -->![](YRBS+Wonder_files/figure-gfm/plot%20girls-3.png)<!-- -->
 
 What about the boys?
 
-``` r
-tsdisplay(wonder_boy, main = "Boys suicide")
-```
+![](YRBS+Wonder_files/figure-gfm/plot%20boys-1.png)<!-- -->![](YRBS+Wonder_files/figure-gfm/plot%20boys-2.png)<!-- -->![](YRBS+Wonder_files/figure-gfm/plot%20boys-3.png)<!-- -->
 
-![](YRBS+Wonder_files/figure-gfm/plot%20boys-1.png)<!-- -->
-
-``` r
-tsdisplay(YRBS_sad_boy_ts, main = "Boys YRBS feelings of sadness", lag.max=10)
-```
-
-![](YRBS+Wonder_files/figure-gfm/plot%20boys-2.png)<!-- -->
-
-``` r
-tsdisplay(YRBS_con_boy_ts, main = "Boys YRBS contemplation of suicide", lag.max=10)
-```
-
-![](YRBS+Wonder_files/figure-gfm/plot%20boys-3.png)<!-- -->
-
-``` r
-out1 <- beast(wonder_tot_ts, season='none')
-out2 <- beast(YRBS_sad_tot_ts, season='none')
-out3 <- beast(YRBS_con_tot_ts, season='none')
-
-plot(out1, main = "Total suicide")
-```
-
-![](YRBS+Wonder_files/figure-gfm/unnamed-chunk-2-1.png)<!-- -->
-
-``` r
-plot(out2, main = "Total YRBS feelings of sadness")
-```
-
-![](YRBS+Wonder_files/figure-gfm/unnamed-chunk-2-2.png)<!-- -->
-
-``` r
-plot(out3, main = "Total YRBS contemplation of suicide")
-```
-
-![](YRBS+Wonder_files/figure-gfm/unnamed-chunk-2-3.png)<!-- -->
+![](YRBS+Wonder_files/figure-gfm/unnamed-chunk-2-1.png)<!-- -->![](YRBS+Wonder_files/figure-gfm/unnamed-chunk-2-2.png)<!-- -->![](YRBS+Wonder_files/figure-gfm/unnamed-chunk-2-3.png)<!-- -->
 
 ``` r
 out1 <- beast(wonder_boy, season='none')
@@ -126,25 +58,4 @@ plot(out3, main = "Boys YRBS contemplation of suicide")
 ```
 
 ![](YRBS+Wonder_files/figure-gfm/unnamed-chunk-3-3.png)<!-- -->
-
-``` r
-out1 <- beast(wonder_grl, season='none')
-out2 <- beast(YRBS_sad_grl_ts, season='none')
-out3 <- beast(YRBS_con_grl_ts, season='none')
-
-plot(out1, main = "Girls suicide")
-```
-
-![](YRBS+Wonder_files/figure-gfm/unnamed-chunk-4-1.png)<!-- -->
-
-``` r
-plot(out2, main = "Girls YRBS feelings of sadness")
-```
-
-![](YRBS+Wonder_files/figure-gfm/unnamed-chunk-4-2.png)<!-- -->
-
-``` r
-plot(out3, main = "Girlss YRBS contemplation of suicide")
-```
-
-![](YRBS+Wonder_files/figure-gfm/unnamed-chunk-4-3.png)<!-- -->
+![](YRBS+Wonder_files/figure-gfm/unnamed-chunk-4-1.png)<!-- -->![](YRBS+Wonder_files/figure-gfm/unnamed-chunk-4-2.png)<!-- -->![](YRBS+Wonder_files/figure-gfm/unnamed-chunk-4-3.png)<!-- -->
