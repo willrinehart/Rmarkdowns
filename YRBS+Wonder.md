@@ -84,6 +84,28 @@ tsdisplay(YRBS_con_boy_ts, main = "Boys YRBS contemplation of suicide", lag.max=
 ![](YRBS+Wonder_files/figure-gfm/plot%20boys-3.png)<!-- -->
 
 ``` r
+out1 <- beast(wonder_tot_ts, season='none')
+out2 <- beast(YRBS_sad_tot_ts, season='none')
+out3 <- beast(YRBS_con_tot_ts, season='none')
+
+plot(out1, main = "Total suicide")
+```
+
+![](YRBS+Wonder_files/figure-gfm/unnamed-chunk-2-1.png)<!-- -->
+
+``` r
+plot(out2, main = "Total YRBS feelings of sadness")
+```
+
+![](YRBS+Wonder_files/figure-gfm/unnamed-chunk-2-2.png)<!-- -->
+
+``` r
+plot(out3, main = "Total YRBS contemplation of suicide")
+```
+
+![](YRBS+Wonder_files/figure-gfm/unnamed-chunk-2-3.png)<!-- -->
+
+``` r
 out1 <- beast(wonder_boy, season='none')
 out2 <- beast(YRBS_sad_boy_ts, season='none')
 out3 <- beast(YRBS_con_boy_ts, season='none')
@@ -91,19 +113,19 @@ out3 <- beast(YRBS_con_boy_ts, season='none')
 plot(out1, main = "Boys suicide")
 ```
 
-![](YRBS+Wonder_files/figure-gfm/unnamed-chunk-2-1.png)<!-- -->
+![](YRBS+Wonder_files/figure-gfm/unnamed-chunk-3-1.png)<!-- -->
 
 ``` r
 plot(out2, main = "Boys YRBS feelings of sadness")
 ```
 
-![](YRBS+Wonder_files/figure-gfm/unnamed-chunk-2-2.png)<!-- -->
+![](YRBS+Wonder_files/figure-gfm/unnamed-chunk-3-2.png)<!-- -->
 
 ``` r
 plot(out3, main = "Boys YRBS contemplation of suicide")
 ```
 
-![](YRBS+Wonder_files/figure-gfm/unnamed-chunk-2-3.png)<!-- -->
+![](YRBS+Wonder_files/figure-gfm/unnamed-chunk-3-3.png)<!-- -->
 
 ``` r
 out1 <- beast(wonder_grl, season='none')
@@ -113,16 +135,16 @@ out3 <- beast(YRBS_con_grl_ts, season='none')
 plot(out1, main = "Girls suicide")
 ```
 
-![](YRBS+Wonder_files/figure-gfm/unnamed-chunk-3-1.png)<!-- -->
+![](YRBS+Wonder_files/figure-gfm/unnamed-chunk-4-1.png)<!-- -->
 
 ``` r
 plot(out2, main = "Girls YRBS feelings of sadness")
 ```
 
-![](YRBS+Wonder_files/figure-gfm/unnamed-chunk-3-2.png)<!-- -->
+![](YRBS+Wonder_files/figure-gfm/unnamed-chunk-4-2.png)<!-- -->
 
 ``` r
 plot(out3, main = "Girlss YRBS contemplation of suicide")
 ```
 
-![](YRBS+Wonder_files/figure-gfm/unnamed-chunk-3-3.png)<!-- -->
+![](YRBS+Wonder_files/figure-gfm/unnamed-chunk-4-3.png)<!-- -->
