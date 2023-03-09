@@ -34,13 +34,25 @@ YRBS_con_boy_ts <- ts(na.omit(stack$`Male seriously considered attempting suicid
                       start = 1991, frequency = .5)
 ```
 
-The nine time series are plotted below using tsdisplay(). They are \*
-Total suicide rate (Wonder) \* Girls suicide rate (Wonder) \* Boys
-suicide rate (Wdoner) \* Total felt sad or hopeless (YRBS) \* Female
-felt sad or hopeless (YRBS) \* Male felt sad or hopeless (YRBS) \*
-Seriously considered attempting suicide (YRBS) \* Female seriously
-considered attempting suicide (YRBS) \* Male seriously considered
-attempting suicide (YRBS)
+The nine time series are plotted below using tsdisplay(). They are
+
+- Total suicide rate (Wonder)
+
+- Girls suicide rate (Wonder)
+
+- Boys suicide rate (Wdoner)
+
+- Total felt sad or hopeless (YRBS)
+
+- Female felt sad or hopeless (YRBS)
+
+- Male felt sad or hopeless (YRBS)
+
+- Seriously considered attempting suicide (YRBS)
+
+- Female seriously considered attempting suicide (YRBS)
+
+- Male seriously considered attempting suicide (YRBS)
 
 What I like about this function is that is plots the data and calculates
 the ACFs and PACFs.
@@ -61,10 +73,10 @@ take a look.
 ![](YRBS+Wonder_files/figure-gfm/plot%20first-1.png)<!-- -->![](YRBS+Wonder_files/figure-gfm/plot%20first-2.png)<!-- -->![](YRBS+Wonder_files/figure-gfm/plot%20first-3.png)<!-- -->![](YRBS+Wonder_files/figure-gfm/plot%20first-4.png)<!-- -->![](YRBS+Wonder_files/figure-gfm/plot%20first-5.png)<!-- -->![](YRBS+Wonder_files/figure-gfm/plot%20first-6.png)<!-- -->![](YRBS+Wonder_files/figure-gfm/plot%20first-7.png)<!-- -->![](YRBS+Wonder_files/figure-gfm/plot%20first-8.png)<!-- -->![](YRBS+Wonder_files/figure-gfm/plot%20first-9.png)<!-- -->
 
 The next nine graphs are outputs from the Rbeast library. Rbeast is an
-implementation of the BEAST estimator, first described in Zhao et
-al. (2019). [Zhao’s Github](https://github.com/zhaokg/Rbeast) has all of
-the supporting documentation. As the paper notes, the estimator assumes
-the data is a time series made of three components, which includes
+implementation of the BEAST estimator, first described in Zhao et al.
+(2019). [Zhao’s Github](https://github.com/zhaokg/Rbeast) has all of the
+supporting documentation. As the paper notes, the estimator assumes the
+data is a time series made of three components, which includes
 seasonality, trend, and abrupt changes, in addition to noise.
 
 The key is the trend:
