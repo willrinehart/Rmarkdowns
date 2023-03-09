@@ -92,4 +92,9 @@ The key is the trend:
 Altogether, BEAST gives us a Bayesian estimated piecewise linear
 function.
 
+The plotted outputs provide an interesting metric, `Pr(tcp)`. This plots
+the probability of having a changepoint over time (along x), with the
+peaks giving the most likely locations of sudden change. In other words,
+these are rough estimates of when the trends changed.
+
 ![](YRBS+Wonder_files/figure-gfm/unnamed-chunk-2-1.png)<!-- -->![](YRBS+Wonder_files/figure-gfm/unnamed-chunk-2-2.png)<!-- -->![](YRBS+Wonder_files/figure-gfm/unnamed-chunk-2-3.png)<!-- -->![](YRBS+Wonder_files/figure-gfm/unnamed-chunk-2-4.png)<!-- -->![](YRBS+Wonder_files/figure-gfm/unnamed-chunk-2-5.png)<!-- -->![](YRBS+Wonder_files/figure-gfm/unnamed-chunk-2-6.png)<!-- -->![](YRBS+Wonder_files/figure-gfm/unnamed-chunk-2-7.png)<!-- -->![](YRBS+Wonder_files/figure-gfm/unnamed-chunk-2-8.png)<!-- -->![](YRBS+Wonder_files/figure-gfm/unnamed-chunk-2-9.png)<!-- -->
